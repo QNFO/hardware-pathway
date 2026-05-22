@@ -39,6 +39,15 @@ This project is **complete** when ALL of the following are true:
 - [x] Mobile responsive (viewport meta, flexible layout)
 - [x] All external links functional
 
+### Archive Cross-Reference
+
+This demo visualizes the neutral atom hardware specification from:
+- **ultrametric_v2** (Archive 2026/05) — hardware-specs.md: 40-atom neutral atom tree specification. Ternary tree depth 3, Rydberg blockade gates, 4K operation.
+- **Bruhat-Tits Quantum Processor** (Archive/Releases 2026/05) — hardware architecture paper mapping Rydberg atoms to Bruhat-Tits tree vertices
+- **TREE OF FREQUENCIES** (Archive 2026/05 → DOI: 10.5281/zenodo.20049051) — physical tree concept: microwave/RF spectral encoding
+
+The 40-atom layout shown here matches the hardware specification from ultrametric_v2. The Rydberg blockade gate mapping follows the Bruhat-Tits Quantum Processor architecture.
+
 ## What Is Explicitly OUT of Scope
 
 - Production-grade accessibility (WCAG AA)
