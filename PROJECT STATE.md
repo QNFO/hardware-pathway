@@ -3,17 +3,16 @@
 **Project:** hardware-pathway-visualizer
 **Description:** 3D rotatable 40-atom neutral atom tree visualization
 **Type:** QWAV Spinoff -- Interactive Artifact (D13)
-**Status:** BUILT -- Ready for deploy
+**Status:** DEPLOYED
 **Created:** 2026-05-22
+**Deployed:** 2026-05-22
+**Live URL:** https://qnfo.github.io/hardware-pathway/
 
 ## Current Status
 
-Artifact is built (index.html + .nojekyll). Single HTML file, vanilla JS.
-Ready for GitHub Pages deployment.
+Deployed to GitHub Pages. Site verified live. Single HTML file, vanilla JS.
+Remote: https://github.com/QNFO/hardware-pathway.git
 
 ## Next Steps
 
-1. Push to GitHub under QNFO org
-2. Enable GitHub Pages in repo settings
-3. Verify live URL
-4. Report back to QWAV agent with URL
+None. Deployment complete. Handoff to QWAV agent for verification.
