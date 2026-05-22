@@ -1,60 +1,62 @@
 # PROJECT CHARTER — Hardware Pathway Visualizer
 
-## Project Identity
+## 1. PROJECT IDENTITY
 
 | Field | Value |
 |:------|:------|
-| **Project Name** | hardware-pathway-visualizer |
+| **Project Name** | `hardware-pathway-visualizer` |
 | **Title** | Hardware Pathway Visualizer |
 | **Type** | QWAV Spinoff — Interactive Artifact (D13) |
+| **QWAV Strategy Reference** | `strategy/3.0.md` — Build Gravity, Tier 1 Artifact A5 |
 | **Created** | 2026-05-22 |
-| **Deployed** | 2026-05-23 |
-| **Live URL** | https://qnfo.github.io/hardware-pathway/ |
-| **Repository** | QNFO/hardware-pathway |
+| **Repository** | `QNFO/hardware-pathway` |
+| **Live Target** | `https://qnfo.github.io/hardware-pathway/` |
 | **Parent Program** | QWAV — Ultrametric Quantum Computing & AI |
 
-## Purpose & Thesis
+## 2. RAISON D'ÊTRE — QWAV STRATEGY NEXUS
 
-3D rotatable 40-atom neutral atom tree visualization. Shows how Rydberg blockade gates map to Bruhat-Tits tree vertices.
+**This project exists because the question every reviewer, funder, and collaborator asks is "can you actually build this?" — and the answer needs a visual.**
 
-## Technical Approach
+The Symmetric Extension paper (DOI: `10.5281/zenodo.20208437`) specifies a 40-atom neutral atom layout in a ternary Bruhat-Tits tree structure, using Rydberg blockade gates. This is physically realizable with current technology. But a text specification is not convincing. A 3D visualization of the atom layout — showing how Rydberg blockade gates map to tree vertices — answers the "can you build this?" question instantly.
 
-Single HTML file, vanilla JavaScript, Canvas API (3D projection). No dependencies.
+**Strategic contribution:**
+- Answers the primary objection: "this is just math, you can't build it"
+- Shows the 40-atom layout is compact, regular, and compatible with existing neutral atom platforms
+- Provides the hardware story for grant applications and lab outreach
+- Rounds out the portfolio: A1=theory, A2=AI, A3=dynamics, A4=education, A5=hardware
 
-## User Interaction
+**Without this project, QWAV has no answer to the hardware feasibility question.**
 
-Mouse rotate/zoom on 3D atom layout. 40 atoms arranged on ternary tree vertices.
+## 3. SCOPE
 
-## Evidence Contribution
+### In Scope
+- 3D (or high-quality 2.5D isometric) visualization of the 40-atom neutral atom layout
+- Ternary Bruhat-Tits tree structure with labeled vertices
+- Rydberg blockade gate visualization — which atom pairs interact
+- Rotation (drag) and zoom (scroll) controls
+- Atom state coloring (ground/excited/Rydberg)
+- Responsive design
 
-Complete neutral atom hardware specification. Within demonstrated capabilities at Harvard, Caltech, PASQAL.
+### Out of Scope
+- Real-time quantum dynamics simulation
+- Actual Rydberg pulse sequence modeling
+- Integration with experimental control software
 
-## Success Criteria
+## 4. CURRENT STATUS (2026-05-23)
 
-1. Interactive elements respond to user input (verified by automated canvas check)
-2. Deployed and loading at https://qnfo.github.io/hardware-pathway/
-3. JavaScript executes without console errors
-4. Cross-linked from QWAV Technical Site Hub
-5. Demonstrates a specific, published QWAV result
+**Phase:** PROTOTYPE — Critically incomplete
 
-## Constraints
+**What exists:** A single `index.html` (6.5 KB, **72 lines JS**) with 2D Canvas and manual projection math. Atoms are drawn as circles. Rotation and zoom via mouse drag.
 
-- Zero external dependencies (no CDN, no npm)
-- Single HTML file (inline CSS/JS)
-- GitHub Pages deployment (no server)
-- MIT licensed or equivalent open-source
+**CRITICAL ISSUE:** The spec requires "3D (or 2.5D isometric)" visualization. What was built is a flat 2D projection with 72 lines of manual trigonometry. There is no:
+- Three.js or any 3D library
+- Actual 3D rendering
+- Rydberg blockade gate visualization
+- Atom state coloring
+- Depth cues or perspective
 
-## Relationship to QWAV Program
-
-This project is one of 5 interactive artifacts (D13) that make QWAV's computational evidence tangible. Each demo demonstrates one key result:
-- Error Confinement → strong triangle inequality visualization
-- Q-PNA Playground → glass-box AI decision trees
-- Convergence Explorer → ultrametric vs Euclidean comparison
-- Tree Distance Sandbox → cophenetic distance computation
-- Hardware Visualizer → neutral atom hardware mapping
-
-Together, these 5 demos + the Technical Site Hub + the Virtual Qubit Showdown form the complete QWAV Gravity Portfolio.
+**72 lines of JS cannot produce a convincing 3D visualization of 40 atoms with Rydberg gates.** This is the most technically inadequate artifact in the portfolio.
 
 ---
 
-*Project charter established 2026-05-22. Project completed 2026-05-23.*
+*Updated: 2026-05-23 | QWAV Strategy: Build Gravity v3.0 | Artifact: Tier 1 — A5*
