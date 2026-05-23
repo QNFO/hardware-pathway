@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="canonical" href="https://qnfo.github.io/hardware-pathway/">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hardware Pathway — Error Suppression Demo — QWAV</title>
 <meta name="description" content="Click atoms to trigger errors. Watch the tree geometry suppress them.">
@@ -56,7 +58,7 @@ footer .sep{color:#4B5563}
 </footer>
 
 <script type="importmap">
-{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}
+{"imports":{"three":"./three.module.js","three/addons/":"./"}}
 </script>
 <script type="module">
 import * as THREE from 'three';
@@ -236,9 +238,9 @@ function propagateToParent(atom) {
     if (mesh) mesh.material = errorMat.clone();
 
     // Suppress the children that were in error (they already propagated)
-    atom.errorState = 2;
+    if (atom.errorState === 1) { atom.errorState = 2; activeErrors--; }
     siblings.forEach(s => {
-      if (s.errorState === 1) s.errorState = 2;
+      if (s.errorState === 1) { s.errorState = 2; activeErrors--; }
     });
 
     // Continue propagating upward
@@ -287,15 +289,6 @@ window.addEventListener('resize', () => {
   renderer.setSize(container.clientWidth, container.clientHeight);
 });
 </script>
-<footer style="text-align:center;padding:1.5rem 1rem;border-top:1px solid rgba(129,140,248,0.08);margin-top:2rem;font-size:0.7rem;color:#666">
-<a href="https://qnfo.github.io/QWAV/" style="color:#818CF8;margin:0 0.4rem">Hub</a> ·
-<a href="https://qnfo.github.io/ultrametric-tree-universality/" style="color:#FBBF24;margin:0 0.4rem">Tree Universality</a> · <a href="https://qnfo.github.io/ultrametric-tree-universality/pub-hub.html" style="color:#FBBF24;margin:0 0.4rem">Pub Hub</a> ·
-<a href="https://qnfo.github.io/Q-PNA/" style="color:#818CF8;margin:0 0.4rem">Q-PNA</a> ·
-<a href="https://qnfo.github.io/ultrametric-convergence/" style="color:#818CF8;margin:0 0.4rem">Convergence</a> ·
-<a href="https://qnfo.github.io/tree-distance/" style="color:#818CF8;margin:0 0.4rem">Tree Distance</a> ·
-<a href="https://qnfo.github.io/hardware-pathway/" style="color:#818CF8;margin:0 0.4rem">Hardware</a>
-</footer>
 
-<footer style="text-align:center;padding:1.5rem;border-top:1px solid rgba(129,140,248,0.1);margin-top:2rem;font-size:0.7rem;color:#666"><a href="https://qnfo.github.io/QWAV/" style="color:#818CF8;margin:0 0.4rem">Hub</a> . <a href="https://qnfo.github.io/ultrametric-tree-universality/" style="color:#818CF8;margin:0 0.4rem">Tree Universality</a> . <a href="https://qnfo.github.io/ultrametric-tree-universality/pub-hub.html" style="color:#818CF8;margin:0 0.4rem">Pub Hub</a> . <a href="https://qnfo.github.io/zenodo-automation/" style="color:#FBBF24;margin:0 0.4rem">Zenodo Auto</a> </footer>
 </body>
 </html>
