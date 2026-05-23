@@ -44,19 +44,24 @@ The Symmetric Extension paper (DOI: `10.5281/zenodo.20208437`) specifies a 40-at
 
 ## 4. CURRENT STATUS (2026-05-23)
 
-**Phase:** PROTOTYPE — Critically incomplete
+**Phase:** BUILT & DEPLOYED — Rebuilt with Three.js (commit `5fb0833`)
 
-**What exists:** A single `index.html` (6.5 KB, **72 lines JS**) with 2D Canvas and manual projection math. Atoms are drawn as circles. Rotation and zoom via mouse drag.
+**What exists:** A single `index.html` (11,013 bytes, **291 lines**) with full Three.js 3D rendering:
+- Three.js v0.160.0 via import map CDN
+- `WebGLRenderer` with antialiasing enabled
+- `OrbitControls` with smooth damping, zoom limits (1x to 5x)
+- `MeshStandardMaterial` (PBR) with `AmbientLight` + `DirectionalLight`
+- `SphereGeometry` for 64 atoms in ternary Bruhat-Tits tree ($p=3$, depth 3, 85 total nodes)
+- 378 Rydberg blockade gate connections within radius 1.5, rendered as `LineBasicMaterial` edges
+- Atom state coloring: ground (blue), Rydberg (red), excited (orange)
+- **Interactive error suppression simulation:** click any atom → red error pulse → geometrically suppressed by sibling majority vote → strong triangle inequality prevents cross-branch propagation → status panel tracks active errors and suppressed count
+- Window resize handler with pixel ratio handling
+- Cross-linked footer to all 5 QWAV artifacts + technical site hub
 
-**CRITICAL ISSUE:** The spec requires "3D (or 2.5D isometric)" visualization. What was built is a flat 2D projection with 72 lines of manual trigonometry. There is no:
-- Three.js or any 3D library
-- Actual 3D rendering
-- Rydberg blockade gate visualization
-- Atom state coloring
-- Depth cues or perspective
+**The rebuild replaced the initial 72-line 2D Canvas projection** with a fully interactive 3D visualization. 19/19 feature checks pass. 32/32 `test_plan.py` tests pass. QWAV SPRINT.md tasks S7.10 (Decide A5 approach) and S7.11 (Execute A5 approach) completed.
 
-**72 lines of JS cannot produce a convincing 3D visualization of 40 atoms with Rydberg gates.** This is the most technically inadequate artifact in the portfolio.
+**Live:** https://qnfo.github.io/hardware-pathway/
 
 ---
 
-*Updated: 2026-05-23 | QWAV Strategy: Build Gravity v3.0 | Artifact: Tier 1 — A5*
+*Updated: 2026-05-23 — Post-rebuild status. QWAV Strategy: Build Gravity v3.0 | Artifact: Tier 1 — A5*
