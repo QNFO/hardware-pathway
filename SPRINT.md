@@ -1,27 +1,17 @@
-# SPRINT TRACKER -- hardware-pathway-visualizer
+# ⚠️ DEPRECATED -- Migrated to GitHub-Native Features
 
-## Current State: CLOSE-OUT (2026-05-23)
+**This file is superseded by GitHub-native project management tools.**
 
-Three.js rebuild (commit `5fb0833`) complete. Docs updated. QWAV sync done.
+All QNFO repos now use GitHub-native features for project management:
+- **Wiki** for persistent documentation (charter, learnings, DoD, state)
+- **Issues** for backlog, risks, and tasks with priority labels
+- **Projects** for sprint/kanban tracking
+- **Discussions** for decisions and announcements
+- **Releases** for versioned changelogs
 
-## Tasks
+See the [QWAV Wiki](https://github.com/QNFO/QWAV/wiki) for the reference implementation.
+See the [QNFO org Projects](https://github.com/orgs/QNFO/projects) for cross-project tracking.
 
-- [x] Build interactive artifact (initial 2D Canvas version)
-- [x] Rebuild with Three.js (real 3D, OrbitControls, 64 atoms, 378 Rydberg gates, PBR, error suppression simulation)
-- [x] Add .nojekyll file
-- [x] Add README.md
-- [x] Deploy to GitHub Pages
-- [x] Verify live URL
-- [x] Cross-link from QWAV Technical Site Hub (S7.14)
-- [x] Write test_plan.py (32/32 pass)
-- [x] Sync Three.js rebuild to QWAV artifacts directory (was stale 2D version)
-- [x] Push to GitHub (remote up-to-date)
-- [x] Update DEFINITION-OF-DONE.md (was stale: said "0/8 NOT BUILT")
-- [x] Update PROJECT-CHARTER.md (was stale: said "72 lines of JS cannot produce...")
-- [ ] Close-out: merge feature/hardware-visualizer → main
-- [ ] Close-out: archive project to Archive\projects\2026\05\
-- [ ] Close-out: final audit
+**This file will not be updated. Do not edit.**
 
-## Next Action
-
-Close-out protocol. Merge → archive → done.
+*Migrated 2026-05-24 during org-wide PM file deprecation.*
