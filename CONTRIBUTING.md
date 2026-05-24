@@ -1,35 +1,102 @@
-# CONTRIBUTING — 2026-05-23
+# Contributing to QNFO Projects
 
-## How to Work on This Project
+**QNFO's ultimate aim is to advance scientific understanding and catalyze positive,
+systemic global change for the collective benefit of all.**
 
-### Agent Setup (New Session)
-1. Read PROJECT STATE.md — understand current status
-2. Read SPRINT.md — identify active task
-3. Read LEARNINGS.md — avoid repeating mistakes
-4. Read CHANGELOG.md (last entry) — know what just changed
-5. Verify git branch with `git branch --show-current`
-6. All work on feature/ branches per QWAV Git Protocol (§9)
+Thank you for your interest in contributing. This document outlines the standards
+and process for contributing to any QNFO repository. All contributions are governed
+by the [QNFO Content License Agreement](LICENSE) and [Code of Conduct](CODE_OF_CONDUCT.md).
 
-### File Naming
-- Project management files: fixed names (README.md, SPRINT.md, etc.)
-- Content files: MAJOR.MINOR.ext versioning (§10)
 
-### Git Discipline
-- NEVER commit to main/master directly
-- Feature branches: `feature/<description>`
-- Commit format: `ACTION:[CREATE|EDIT|DELETE] FILE: <path> RATIONALE:<reason>`
-- Full protocol: DEFAULT.md §9
+## Before You Contribute
 
-### Development Environment
-- Python: Standard library only unless specified
-- Web: Single HTML file with inline CSS/JS (no build step)
-- Git: Use `-C "<project_path>"` flag for project repos
+1. **Read the LICENSE.** All contributions are governed by the QNFO Content License
+   Agreement v1.1. By submitting a contribution, you agree that your contribution
+   will be licensed under those same terms, and that you have the right to do so.
 
-### Quality Gates
-- Before merge: All tests pass, git worktree clean
-- Before deploy: Canvas renders, no JS errors, mobile check
-- Before close-out: All tasks marked [x], docs updated, final audit
+2. **Read the Code of Conduct.** All QNFO spaces are governed by the
+   [Code of Conduct](CODE_OF_CONDUCT.md). Harassment, discrimination, bad-faith
+   argumentation, and unethical uses have no place here.
+
+3. **Check existing issues and discussions.** Before opening a new issue, search
+   existing issues and discussions to see if your topic is already being addressed.
+
+
+## How to Contribute
+
+### Bug Reports
+
+- Use the issue tracker
+- Describe the bug clearly: what happened, what you expected, steps to reproduce
+- Include environment information (OS, browser, Python version, etc.)
+- Attach relevant logs, screenshots, or error messages
+
+### Feature Requests and Enhancements
+
+- Open an issue with the "enhancement" label
+- Describe the proposed change and its rationale
+- Explain how it advances the project's goals
+- Be open to discussion and iteration
+
+### Code and Documentation Contributions
+
+1. **Fork the repository** and create a feature branch
+2. **Make your changes** following the project's conventions
+3. **Write or update tests** if applicable
+4. **Update documentation** to reflect changes
+5. **Submit a pull request** with a clear description of changes
+6. **Link to relevant issues** in the PR description
+
+### Publication and Research Contributions
+
+- Research proposals, paper drafts, and theoretical contributions are welcome
+- Submit via issues or discussions with the "research" label
+- Clearly distinguish established results from speculation
+- Cite all sources and prior art
+
+
+## Standards
+
+### Code Quality
+- Write clear, self-documenting code
+- Include comments for non-obvious logic
+- Follow existing code style conventions in the repository
+- Test your changes before submitting
+
+### Documentation
+- Use clear, accessible language
+- Define specialized terms
+- Keep documentation current with code changes
+- Translate or summarize complex material where feasible
+
+### Attribution
+- Give proper credit to prior work
+- Cite sources, datasets, and inspirations
+- The LICENSE requires attribution for content use -- this applies to
+  contributions as well
+
+
+## Licensing of Contributions
+
+By submitting a contribution to any QNFO repository, you affirm that:
+
+1. You are the original author of the contribution OR have the right to submit
+   it under the QNFO Content License Agreement
+2. Your contribution is licensed under the QNFO Content License Agreement v1.1
+   (the same terms as the repository)
+3. You understand that contributions are made for non-commercial, public-good
+   purposes
+4. You have disclosed any third-party material included in your contribution
+   and its applicable license
+
+
+## Questions?
+
+For questions about contributing, contact the Principal Investigator at
+rowan.quni@qnfo.org (backup: rowan.quni@outlook.com).
+
 
 ---
 
-*QWAV Projects Agent workflow. See DEFAULT.md for full protocol.*
+*QNFO -- advancing scientific understanding for the collective benefit of all.
+Everything open. Everything accountable. Everything for the good.*
