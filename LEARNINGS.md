@@ -1,35 +1,17 @@
-# LEARNINGS — Hardware Pathway Visualizer
+# ⚠️ DEPRECATED -- Migrated to GitHub-Native Features
 
-Project-specific lessons from development and deployment.
+**This file is superseded by GitHub-native project management tools.**
 
-## L1: Single-File HTML is the fastest path to interactive evidence
-- **Category:** METHODOLOGY
-- **Issue:** Multi-file web apps with build steps add deployment complexity.
-- **Solution:** Single HTML file with inline CSS/JS. No build, no dependencies, instant Pages deploy.
-- **Prevention:** Start with single-file. Only split into multi-file when complexity demands it.
-- **Cross-Project:** YES — all 5 QWAV demo artifacts follow this pattern.
+All QNFO repos now use GitHub-native features for project management:
+- **Wiki** for persistent documentation (charter, learnings, DoD, state)
+- **Issues** for backlog, risks, and tasks with priority labels
+- **Projects** for sprint/kanban tracking
+- **Discussions** for decisions and announcements
+- **Releases** for versioned changelogs
 
-## L2: Canvas non-zero-pixel check is the minimum viable functional test
-- **Category:** TESTING
-- **Issue:** HTML page can load without errors but canvas may be blank.
-- **Solution:** After deploy, check canvas.getImageData() for non-zero pixels.
-- **Prevention:** Add to deploy checklist: verify canvas content renders.
-- **Cross-Project:** YES — applies to all canvas-based demos.
+See the [QWAV Wiki](https://github.com/QNFO/QWAV/wiki) for the reference implementation.
+See the [QNFO org Projects](https://github.com/orgs/QNFO/projects) for cross-project tracking.
 
-## L3: GitHub Pages has a 1-2 minute rebuild delay
-- **Category:** DEPLOYMENT
-- **Issue:** Pushing fixes doesn't make them immediately visible.
-- **Solution:** Wait 30-90 seconds after push before verifying. Use cache-busting query parameters.
-- **Prevention:** Always verify after a short delay. Don't assume instant deploy.
-- **Cross-Project:** YES.
+**This file will not be updated. Do not edit.**
 
-## L4: Interactive verification catches JS bugs that syntax checks miss
-- **Category:** TESTING
-- **Issue:** Code with no syntax errors can still fail at runtime (e.g., IIFE semicolon bug).
-- **Solution:** After every JS change, test actual user interaction (move slider, click button).
-- **Prevention:** Include interaction test in the Definition of Done.
-- **Cross-Project:** YES.
-
----
-
-*Learned during hardware-pathway-visualizer development. Cross-project candidates added to CROSS-PROJECT-LEARNINGS.md.*
+*Migrated 2026-05-24 during org-wide PM file deprecation.*
