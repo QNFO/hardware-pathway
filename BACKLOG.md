@@ -1,32 +1,17 @@
-# BACKLOG — Hardware Pathway Visualizer
+# ⚠️ DEPRECATED -- Migrated to GitHub-Native Features
 
-**Project:** hardware-pathway-visualizer
-**Last updated:** 2026-05-23
+**This file is superseded by GitHub-native project management tools.**
 
-## Completed (Deployed)
+All QNFO repos now use GitHub-native features for project management:
+- **Wiki** for persistent documentation (charter, learnings, DoD, state)
+- **Issues** for backlog, risks, and tasks with priority labels
+- **Projects** for sprint/kanban tracking
+- **Discussions** for decisions and announcements
+- **Releases** for versioned changelogs
 
-- [x] Build interactive single-page artifact (index.html)
-- [x] Add .nojekyll for GitHub Pages
-- [x] Add README.md
-- [x] Deploy to GitHub Pages (https://qnfo.github.io/hardware-pathway/)
-- [x] Verify live URL
-- [x] Cross-link from QWAV Technical Site Hub
+See the [QWAV Wiki](https://github.com/QNFO/QWAV/wiki) for the reference implementation.
+See the [QNFO org Projects](https://github.com/orgs/QNFO/projects) for cross-project tracking.
 
-## Deferred (P3 — Nice to Have)
+**This file will not be updated. Do not edit.**
 
-- [ ] Add keyboard accessibility (tab navigation, ARIA labels)
-- [ ] Add dark/light mode toggle
-- [ ] Add shareable URL parameters (preserve slider state)
-- [ ] Add embedded documentation panel
-- [ ] Add automated screenshot/capture for social sharing
-- [ ] Performance audit (Lighthouse, Core Web Vitals)
-- [ ] Multi-language support
-
-## Known Edge Cases
-
-- [ ] Canvas may not resize on mobile orientation change
-- [ ] Touch events on mobile may conflict with slider drag
-
----
-
-*hardware-pathway-visualizer is a deployed GitHub Pages artifact. Backlog items are enhancements, not blockers.*
+*Migrated 2026-05-24 during org-wide PM file deprecation.*
