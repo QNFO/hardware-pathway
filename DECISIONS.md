@@ -1,35 +1,17 @@
-# DECISIONS — Hardware Pathway Visualizer
+# ⚠️ DEPRECATED -- Migrated to GitHub-Native Features
 
-Architecture and design decisions with rationale.
+**This file is superseded by GitHub-native project management tools.**
 
-## ADR-1: Single HTML file, no dependencies
-- **Date:** 2026-05-22
-- **Status:** Accepted
-- **Context:** QWAV interactive demos need to be deployable with zero build step.
-- **Decision:** All CSS and JavaScript inlined in index.html. No npm, no webpack, no CDN.
-- **Consequences:** File grows with complexity. Acceptable for demos under 100 KB. Not suitable for production applications.
+All QNFO repos now use GitHub-native features for project management:
+- **Wiki** for persistent documentation (charter, learnings, DoD, state)
+- **Issues** for backlog, risks, and tasks with priority labels
+- **Projects** for sprint/kanban tracking
+- **Discussions** for decisions and announcements
+- **Releases** for versioned changelogs
 
-## ADR-2: Canvas API over SVG for interactive visualization
-- **Date:** 2026-05-22
-- **Status:** Accepted
-- **Context:** Need real-time visual feedback for user interactions.
-- **Decision:** Use Canvas API for pixel-level control and fast redraws. SVG for static structural elements where interactivity is click-based.
-- **Consequences:** Canvas has no DOM — custom hit-testing required for click interactions.
+See the [QWAV Wiki](https://github.com/QNFO/QWAV/wiki) for the reference implementation.
+See the [QNFO org Projects](https://github.com/orgs/QNFO/projects) for cross-project tracking.
 
-## ADR-3: GitHub Pages with .nojekyll for zero-config deploy
-- **Date:** 2026-05-22
-- **Status:** Accepted
-- **Context:** Need public URL with zero server cost, zero configuration.
-- **Decision:** Deploy to QNFO GitHub organization Pages. .nojekyll file prevents Jekyll processing. master branch, / (root) source.
-- **Consequences:** No server-side logic. Static only. Acceptable for client-side demos.
+**This file will not be updated. Do not edit.**
 
-## ADR-4: Verbatim published data, no simulation
-- **Date:** 2026-05-22
-- **Status:** Accepted
-- **Context:** Demo should reflect published results, not generate new data.
-- **Decision:** Hardcode verified research data from published papers. Interactive controls adjust parameters within validated range.
-- **Consequences:** Demo shows what WAS validated, not predictions. Honest about scope.
-
----
-
-*All decisions made during hardware-pathway-visualizer development.*
+*Migrated 2026-05-24 during org-wide PM file deprecation.*
